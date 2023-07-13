@@ -64,6 +64,12 @@ nav .nav-links a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
+nav .nav-links a.activepage {
+  color: #063ab9;
+}
+nav .nav-links a.activepage::after {
+  transform: scaleX(1);
+}
 nav .nav-buttons {
   display: flex;
   gap: 10px;
@@ -107,7 +113,7 @@ nav .nav-buttons {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -121,7 +127,7 @@ nav .nav-buttons {
   }
   nav .nav-buttons {
     position: fixed;
-    top: 80vh;
+    top: 60vh;
     left: 0;
     width: 100%;
     height: 20vh;

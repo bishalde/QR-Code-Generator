@@ -69,6 +69,13 @@ nav{
                 transform: scaleX(1);
                 transform-origin: left;
             }
+
+            &.activepage{
+                color: #063ab9;
+                &::after{
+                    transform: scaleX(1);
+                }
+            }
         }
     }
 
@@ -128,7 +135,7 @@ nav{
             position: fixed;
             top: 0; left: 0;
             width: 100%;
-            height: 80vh;
+            height: 60vh;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -145,7 +152,7 @@ nav{
 
         .nav-buttons{
             position: fixed;
-            top: 80vh; left: 0;
+            top: 60vh; left: 0;
             width: 100%;
             height: 20vh;
             flex-direction: column;

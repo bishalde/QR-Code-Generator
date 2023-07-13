@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.css'
-import Navbar from './components/Navbar/Navbar'
+import HomePage from './components/HomePage'
 
 function App() {
   return (
     <>
-        <Navbar />
+        <HomePage />
     </>
   )
 }

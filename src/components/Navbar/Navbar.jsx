@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
 
           <div className={navlinksvalue}>
-            <a className="active" href="#">
+            <a className="active activepage" href="#">
               Product
             </a>
             <a className="active" href="#">

@@ -1,0 +1,12 @@
+.contentbox {
+  width: 100%;
+  position: relative;
+  padding: 50px;
+}
+.contentbox .mainbox {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  background-color: #ecf7ff;
+  border-radius: 50px;
+}/*# sourceMappingURL=Contentbox.css.map */

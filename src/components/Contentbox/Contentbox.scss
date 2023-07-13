@@ -1,0 +1,17 @@
+$boxbackgroundcolor:#ecf7ff;
+$qrboxbackgroundcolor:#00288a;
+$secondary-qrboxbackgroundcolor:#113a9f;
+
+.contentbox{
+    width: 100%;
+    position: relative;
+    padding: 50px ;
+
+    .mainbox{
+        position: relative;
+        width: 100%;
+        min-height: 700px;
+        background-color: $boxbackgroundcolor;
+        border-radius: 50px;
+    }
+}
