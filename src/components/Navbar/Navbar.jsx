@@ -20,7 +20,7 @@ const Navbar = () => {
     <>
       <nav>
         <div className="logo">
-          <img src="/public/logos/bigLogo_-_Crop-removebg-preview.png" />
+          <img src="/logos/bigLogo_-_Crop-removebg-preview.png" />
         </div>
 
         <div className="hamberger" onClick={navbarActive}>
