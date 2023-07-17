@@ -4,13 +4,35 @@ import "./Contentbox.css";
 const Contentbox = () => {
   const [textval,setTeextValue]=useState(null);
   const [qrData,setQrData]=useState(``);
+  const [qrSize,setQrSize]=useState(`200`);
+  const [margin,setMargin]=useState(null);
+  const [qzone,setQzone]=useState(null);
+  const [qrColor,setQrColor]=useState('#000000');
+  const [qrBgColor,setQrBgColor]=useState('#ffffff');
+  const [formatType,setFormatType]=useState('png');
+  
+  const handleDownload = (format) => {
+
+    if(formatType=="png")
+      setFormatType("png")
+    else if(formatType=="jpeg")
+      setFormatType("jpeg")
+
+      const downloadLink = document.createElement("a");
+      downloadLink.href = qrData;
+      downloadLink.download = `qrcode.${format}`;
+      downloadLink.style.display = "none";
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+  };
 
   useEffect(()=>{
-    if(textval==null)
-      setQrData(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Welcome To QRBuilder`)
+    if(textval==null || textval=="")
+      setQrData(`https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&margin=${margin}&color=${qrColor.slice(1)}&bgcolor=${qrBgColor.slice(1)}&format=${formatType}&data=Welcome To QRBuilder`)
     else
-      setQrData(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${textval}`)
-  },[textval])
+      setQrData(`https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}&margin=${margin}&color=${qrColor.slice(1)}&bgcolor=${qrBgColor.slice(1)}&format=${formatType}&data=${textval}`)
+  },[textval,qrSize,margin,qrColor,qrBgColor])
 
 
   return (
@@ -69,29 +91,57 @@ const Contentbox = () => {
           <div className="textbox">
 
             <textarea type="text" placeholder="Enter Text Here" onChange={(e)=>{setTeextValue(e.target.value)}} value={textval} />
-            <h1>Your QR Code will be generated automatically</h1>
+            <h1>Your QR Code will be generated automatically </h1>
           </div>
 
           <div className="displaybox">
             <div className="qrbox">
-              <img src={qrData} alt="QR" />
+              <img src={qrData} className="qrimg" alt="QR" />
             </div>
 
             <div className="qrsettings">
               <div className="dimension">
-              <input type="text" name="size" id="size" placeholder="Enter dimension"/>
-              <p>Your Dimension : 200x200</p>
+                <h1> Height X width</h1>
+              <input type="number" name="size" id="size" placeholder="Enter dimension" value={qrSize} onChange={(e)=>{setQrSize(e.target.value)}}/>
+              <p>Your Dimension : {qrSize}x{qrSize}</p>
               </div>
-              <input type="text" name="color" id="color" placeholder="Enter QR Color" />
-              <input type="text" name="bgcolor" id="bgcolor" placeholder="Enter Background color" />
+              <h1>Color</h1>
+              <input type="color" name="color" id="color" placeholder="Enter QR Color" value={qrColor} onChange={(e)=>{setQrColor(e.target.value)}} />
 
-              <input type="text" name="margin" id="marginval" placeholder="Enter Margin Value" />
-              <input type="text" name="qrzone" id="qrzone" placeholder="Enter qrzone value" />
+              <h1>Backgroung Color</h1>
+              <input type="color" name="bgcolor" id="bgcolor" placeholder="Enter Background color" value={qrBgColor} onChange={(e)=>{setQrBgColor(e.target.value)}}/>
+
+              <h1>Margin</h1>
+              <input type="number" name="margin" id="marginval" placeholder="Enter Margin Value" value={margin} onChange={(e)=>{ setMargin(e.target.value)}} />
+              <h1>QZone</h1>
+              <input type="number" name="qrzone" id="qrzone" placeholder="Enter qrzone value"  value={qzone} onChange={(e)=>{ setQzone(e.target.value)}}/>
             </div>
 
             <div className="qrbuttons">
-              <button className="qrbutton"><img width="48" height="48" src="https://img.icons8.com/fluency/48/download.png" alt="download"/>PNG</button>
-              <button className="qrbutton"><img width="48" height="48" src="https://img.icons8.com/fluency/48/download.png" alt="download"/>JPEG</button>
+            <button
+            className="qrbutton"
+            onClick={() => handleDownload("png")}
+          >
+            <img
+              width="48"
+              height="48"
+              src="https://img.icons8.com/fluency/48/download.png"
+              alt="download"
+            />
+            PNG
+          </button>
+          <button
+            className="qrbutton"
+            onClick={() => handleDownload("jpeg")}
+          >
+            <img
+              width="48"
+              height="48"
+              src="https://img.icons8.com/fluency/48/download.png"
+              alt="download"
+            />
+            JPEG
+          </button>
             </div>
 
 
