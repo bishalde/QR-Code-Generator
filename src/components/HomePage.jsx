@@ -3,7 +3,7 @@ import Navbar from './Navbar/Navbar'
 import Homebox from './Homebox/Homebox'
 import Contentbox from './Contentbox/Contentbox'
 
-function HomePage() {
+function HomePage(props) {
   return (
     <>
     <Navbar />

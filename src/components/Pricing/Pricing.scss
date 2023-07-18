@@ -1,0 +1,66 @@
+.pricingbox__title{
+    position: relative;
+    top:100px;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pricingbox{
+    position: relative;
+    top:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .priceplans{
+
+        border: 0px;
+        outline: 0px;
+
+        border-radius: 30px;
+
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+        padding: 70px 60px;
+
+        h3{
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        h5{
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        p{
+            font-size: 3rem;
+            font-weight: 400;
+
+            span{
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+
+        button{
+            margin: 20px;
+            border: 1px solid #063ab9;
+        }
+
+
+        ul{
+
+            li{
+                font-size: 1rem;
+                list-style-type: circle;
+            }
+        }
+
+    }
+    
+}

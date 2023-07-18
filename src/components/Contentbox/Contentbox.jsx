@@ -90,7 +90,7 @@ const Contentbox = () => {
           </div>
           <div className="textbox">
 
-            <textarea type="text" placeholder="Enter Text Here" onChange={(e)=>{setTeextValue(e.target.value)}} value={textval} />
+            <textarea id='userInput' type="text" placeholder="Enter Text Here" onChange={(e)=>{setTeextValue(e.target.value)}} value={textval} />
             <h1>Your QR Code will be generated automatically </h1>
           </div>
 

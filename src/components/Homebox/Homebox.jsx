@@ -19,7 +19,9 @@ function Homebox() {
 
         <div className="homebox-btns">
         <img src="/images/arrow.png" />
+          <a href="#userInput">
           <button className='btn-secondary'>Get Started</button>
+          </a>
           <button className='btn'>Watch Demo</button>
         </div>
         
