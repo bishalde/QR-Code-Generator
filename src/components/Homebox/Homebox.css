@@ -7,7 +7,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 90vh;
+  margin-bottom: 10vh;
 }
+
+@media (max-width: 600px) {
+  .homebox {
+    position: relative;
+    top: 80px;
+    padding: 70px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: initial;
+    margin-bottom: initial;
+  }
+}
+
+
 .homebox h1 {
   text-align: center;
   font-size: 5.5rem;
@@ -65,6 +84,7 @@
   left: -30px;
   border: 2px solid #063ab9;
   margin: 10px;
+  padding: 18px;
 }
 
 @media screen and (max-width: 950px) {
