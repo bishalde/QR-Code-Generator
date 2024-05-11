@@ -18,6 +18,7 @@ nav .logo img {
   display: inline-block;
   width: 210px;
   height: 65px;
+  transition: all 500ms;
 }
 nav .logo img:hover {
   scale: 1.1;
