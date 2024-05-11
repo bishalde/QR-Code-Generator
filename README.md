@@ -1,6 +1,6 @@
 <h3 align="center">
   <img alt="website logo" src="public/logos/bigLogo - Crop.png" width="600px" height="200px"/><br/>
-  " QRBuilder is a dynamic QR code Generator.! "<br/>
+  " QRBuilder is a dynamic QR code Generator. "<br/>
   <a href="https://qrbuilder.vercel.app" target=""_blank> 1. https://qrbuilder.vercel.app</a><br />
 </h3>
 <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
@@ -43,9 +43,8 @@
 
 #### QRBuilder-QRBuilder is a dynamic QR code Generator.!
 
-QRBuilder is a dynamic QR code Generator. It allows user to easily create
-customized QR codes for sharing or embedding on their websites.
-QRBuilder is an innovative and user-friendly dynamic QR code generator that empowers users to effortlessly create personalized QR codes tailored to their specific needs. Whether it's for sharing contact information, website URLs, product details, or any other data, QRBuilder provides a seamless platform for designing and customizing QR codes that resonate with individual branding and preferences. With its intuitive interface, users can quickly generate QR codes and even embed them on their websites, enabling seamless information exchange and enhanced user engagement. Simplifying the process of QR code creation, QRBuilder is the go-to tool for anyone seeking a versatile and efficient solution for sharing data in an interactive and visually appealing manner.
+QRBuilder is a dynamic QR code Generator. It allows users to create customized QR codes for sharing or embedding on their websites.
+QRBuilder is an innovative and user-friendly dynamic QR code generator that empowers users to create personalized QR codes effortlessly. Whether it is for sharing contact information, website URLs, product details, or any other data, QRBuilder provides a seamless platform for designing and customizing QR codes that resonate with individual branding and preferences. With its intuitive interface, users can quickly generate QR codes and embed them on their websites, enabling seamless information exchange and enhanced user engagement. Simplifying the process of QR code creation, QRBuilder is the go-to tool for anyone seeking a versatile and efficient solution for sharing data in an interactive and visually appealing manner.
 
 ### Features 😱
 
