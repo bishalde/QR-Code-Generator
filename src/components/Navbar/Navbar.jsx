@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, Navigate, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [navlinksvalue, setnavlinks] = useState("nav-links");
   const [navbuttonsvlue, setnavbuttons] = useState("nav-buttons");
+
+  const Navigate = useNavigate();
 
   const location = useLocation();
   const [url, setUrl] = useState(null);
@@ -53,13 +55,16 @@ const Navbar = () => {
             } to="/pricing">
             Pricing
           </NavLink>
-          <NavLink className={({ isActive, isPending }) =>
+          
+          {/* <NavLink className={({ isActive, isPending }) =>
               isPending ? "active " : isActive ? "activepage" : ""
             } to="/">
             Solution
-          </NavLink>
+          </NavLink> */}
+
           <a
             className="active"
+            target="_blank"
             href="https://github.com/bishalde/Qr-Code-Generator"
           >
             Github
@@ -67,7 +72,7 @@ const Navbar = () => {
         </div>
 
         <div className={navbuttonsvlue}>
-          <button className="btn">Sign In</button>
+          <button onClick={(e) => {Navigate("/signin")}} className="btn">Sign In</button>
           <button className="btn btn-secondary">Sign Up</button>
         </div>
       </nav>
