@@ -30,14 +30,16 @@ button{
     transition: .2s ease-in-out;
 
     &.btn-secondary{
-        background-color: var(--bgColor);
-        color: #ffffff;
+       
     }
 
     &:hover{
         scale: 1.1;
+        color: white;
+        background-color: #063ab9;    
     }
 }
+
 
 
 /* ::-webkit-scrollbar-track
