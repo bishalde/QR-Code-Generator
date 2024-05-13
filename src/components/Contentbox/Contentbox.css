@@ -44,16 +44,15 @@
   width: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin: 20px 0px;
 }
 .contentbox .mainbox .textbox textarea {
   width: 100%;
-  height: 100px;
+  resize: none;
   border: 0;
   outline: 0;
   background-color: inherit;
-  font-size: 1rem;
+  font-size: 3rem;
   color: #00288a;
 }
 .contentbox .mainbox .textbox textarea::-moz-placeholder {
@@ -75,7 +74,6 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .contentbox .mainbox .displaybox .qrbox {
@@ -156,6 +154,11 @@
   width: 25px;
 }
 
+.contentbox .mainbox .textbox h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 @media screen and (max-width: 950px) {
   .contentbox .mainbox {
     flex-direction: column;
@@ -199,6 +202,11 @@
     width: 100%;
     height: 300px;
   }
+
+  .contentbox .mainbox .textbox textarea {
+    font-size: 2rem;
+  }
+
   .contentbox .mainbox .textbox textarea::-moz-placeholder {
     font-size: 2rem;
     color: #00288a;
@@ -216,4 +224,20 @@
     width: 100%;
     padding: 20px 0px;
   }
-}/*# sourceMappingURL=Contentbox.css.map */
+}
+
+textarea::-webkit-scrollbar {
+  width: 15px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #063ab9;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 1px 10px grey;
+}
+/*# sourceMappingURL=Contentbox.css.map */
