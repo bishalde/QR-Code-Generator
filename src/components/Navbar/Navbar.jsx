@@ -55,7 +55,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink className={({ isActive, isPending }) =>
               isPending ? "active " : isActive ? "activepage" : ""
-            } to="/">
+            } to="/solution">
             Solution
           </NavLink>
           <a
