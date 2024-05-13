@@ -6,7 +6,7 @@
 .contentbox .mainbox {
   position: relative;
   width: 100%;
-  background-color: #ecf7ff;
+  /* background-color: #ecf7ff; */
   border-radius: 50px;
   height: -moz-fit-content;
   height: fit-content;

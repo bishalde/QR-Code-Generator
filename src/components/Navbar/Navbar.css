@@ -75,6 +75,7 @@ nav .nav-buttons {
   gap: 10px;
 }
 
+
 @media screen and (max-width: 950px) {
   nav {
     padding: 5px 5px;

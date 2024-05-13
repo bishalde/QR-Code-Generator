@@ -38,7 +38,7 @@ const Contentbox = () => {
   return (
     <>
       <section className="contentbox">
-        <div className="mainbox">
+        <div className="mainbox bg-[#ecf7ff] dark:bg-neutral-950 from-neutral-950 to-[#0F172A]">
           <div className="sliderbox">
             <img
               width="48"
@@ -91,7 +91,7 @@ const Contentbox = () => {
           <div className="textbox">
 
             <textarea id='userInput' type="text" placeholder="Enter Text Here" onChange={(e)=>{setTeextValue(e.target.value)}} value={textval} />
-            <h1>Your QR Code will be generated automatically </h1>
+            <h1 className="dark:text-white">Your QR Code will be generated automatically </h1>
           </div>
 
           <div className="displaybox">
@@ -99,7 +99,7 @@ const Contentbox = () => {
               <img src={qrData} className="qrimg" alt="QR" />
             </div>
 
-            <div className="qrsettings">
+            <div className="qrsettings ">
               <div className="dimension">
                 <h1> Height X width</h1>
               <input type="number" name="size" id="size" placeholder="Enter dimension" value={qrSize} onChange={(e)=>{setQrSize(e.target.value)}}/>
