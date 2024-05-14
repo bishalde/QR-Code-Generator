@@ -47,22 +47,22 @@
   justify-content: center;
   margin: 20px 0px;
 }
-.contentbox .mainbox .textbox textarea {
+.contentbox .mainbox .textbox input {
   width: 100%;
   height: 100px;
   border: 0;
   outline: 0;
   background-color: inherit;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #00288a;
 }
-.contentbox .mainbox .textbox textarea::-moz-placeholder {
-  font-size: 3rem;
+.contentbox .mainbox .textbox input::-moz-placeholder {
+  font-size: 2rem;
   color: #00288a;
   margin: 10px 0;
 }
-.contentbox .mainbox .textbox textarea::placeholder {
-  font-size: 3rem;
+.contentbox .mainbox .textbox input::placeholder {
+  font-size: 2rem;
   color: #00288a;
   margin: 10px 0;
 }
