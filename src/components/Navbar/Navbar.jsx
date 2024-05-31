@@ -64,11 +64,16 @@ const Navbar = () => {
           >
             Github
           </a>
+          <NavLink className={({ isActive, isPending }) =>
+              isPending ? "active " : isActive ? "activepage" : ""
+            } to="/ContactUs">
+            ContactUs
+          </NavLink>
         </div>
 
         <div className={navbuttonsvlue}>
-          <button className="btn">Sign In</button>
-          <button className="btn btn-secondary">Sign Up</button>
+          <button className="btn">SignIn</button>
+          <button className="btn btn-secondary">SignUp</button>
         </div>
       </nav>
     </>
