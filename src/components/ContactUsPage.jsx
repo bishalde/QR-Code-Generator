@@ -1,15 +1,13 @@
 import React from 'react'
 import Navbar from './Navbar/Navbar'
-import Homebox from './Homebox/Homebox'
-import Contentbox from './Contentbox/Contentbox'
+import ContactUs from './ContactUs/ContactUs'
 
 
 function HomePage(props) {
   return (
     <>
     <Navbar />
-    <Homebox />
-    <Contentbox />
+    <ContactUs />
     </>
   )
 }

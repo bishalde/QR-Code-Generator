@@ -1,0 +1,78 @@
+.contact-us {
+    max-width: 600px;
+    margin: 100px ;
+    margin-left: 350px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Poppins, sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .star-rating {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .star {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s ease;
+  }
+  
+  .star.filled,
+  .star.hover {
+    color: #ffc107;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  .form-status {
+    text-align: center;
+    margin-top: 20px;
+    color: green;
+  }
+  
