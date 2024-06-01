@@ -39,6 +39,26 @@ button{
     }
 }
 
+/* scrollbar-styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 6px; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: #c7c8ff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #063ab9;; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2841d2; /* Darker blue color on hover */
+}
 
 /* ::-webkit-scrollbar-track
 {
