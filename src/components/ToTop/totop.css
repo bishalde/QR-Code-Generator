@@ -1,0 +1,37 @@
+.round-button-hidden {
+    background-color: dodgerblue;
+    font-size: 2rem;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    right: 2%;
+    bottom: 4%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: scale(0);
+}
+
+.round-button {
+    background-color: dodgerblue;
+    font-size: 2rem;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    right: 2%;
+    bottom: 4%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.round-button:hover {
+    background-color: rgb(11, 129, 247);
+    transition: all 0.2s ease;
+}
