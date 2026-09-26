@@ -155,10 +155,7 @@ git push -u origin <your_branch_name>
 
 <p align="center"><a href="https://www.instagram.com/itsbishalde/" target='_blank'><img src="https://img.shields.io/badge/Instagram-pink?style=for-the-badge&logo=instagram" /></a>&nbsp;
 <a href="https://www.linkedin.com/in/bishalde/" target='_blank'><img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin" /></a>&nbsp;
-<a href="https://github.com/bishalde/" target='_blank'><img src="https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github"/></a>&nbsp;
-<a href="@itsbishalde" target='_blank'><img src="https://img.shields.io/badge/Snapchat-FFFC00?style=for-the-badge&logo=snapchat&logoColor=white"/></a>&nbsp;<br/>
-<a href="https://www.hackerrank.com/bishalde" target='_blank'><img src="https://img.shields.io/badge/Hackerrank-green?style=for-the-badge&logo=hackerrank"/></a>&nbsp;
-<a href="https://www.codechef.com/users/bishalde" target='_blank'><img src="https://img.shields.io/badge/Codechef-%23B92B27?style=for-the-badge&logo=Codechef&logoColor=white"/></a>&nbsp;</p>
+<a href="https://github.com/bishalde/" target='_blank'><img src="https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github"/></a></p>
 
 ### Give Me A Bow 🏹
 
