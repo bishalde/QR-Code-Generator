@@ -56,7 +56,7 @@ QRBuilder is an innovative and user-friendly dynamic QR code generator that empo
 - **Scan safety:** error-correction levels, adjustable margin, and a warning when colors are too low-contrast to scan
 - **Exports:** PNG, JPEG or SVG at 512, 1024 or 2048 px, plus copy-to-clipboard
 - **History:** save codes in your browser and reopen them later to edit
-- **Light and dark mode**, mobile-friendly layout
+- **Light and dark mode** (opens in light mode; your choice is remembered), mobile-friendly layout
 - **Private:** everything runs in the browser; nothing you type is uploaded
 
 ### Run It Locally 💻

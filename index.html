@@ -13,14 +13,11 @@
       rel="stylesheet"
     />
     <script>
-      // Apply the saved or system theme before first paint to avoid a flash.
+      // Light by default; dark only if the visitor chose it. Runs before first paint to avoid a flash.
       (function () {
         var theme;
         try { theme = JSON.parse(localStorage.getItem("qrbuilder:theme")); } catch (e) {}
-        if (theme !== "light" && theme !== "dark") {
-          theme = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        }
-        document.documentElement.dataset.theme = theme;
+        document.documentElement.dataset.theme = theme === "dark" ? "dark" : "light";
       })();
     </script>
   </head>

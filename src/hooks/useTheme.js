@@ -3,10 +3,9 @@ import { readJSON, writeJSON } from "../lib/storage";
 
 const KEY = "qrbuilder:theme";
 
+// Light by default; dark only once the visitor has switched to it.
 function initialTheme() {
-  const saved = readJSON(KEY, null);
-  if (saved === "light" || saved === "dark") return saved;
-  return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return readJSON(KEY, null) === "dark" ? "dark" : "light";
 }
 
 export default function useTheme() {
