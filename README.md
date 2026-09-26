@@ -153,7 +153,7 @@ git push -u origin <your_branch_name>
 
 <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
 
-<p align="center"><a href="https://www.instagram.com/bishal_de/" target='_blank'><img src="https://img.shields.io/badge/Instagram-pink?style=for-the-badge&logo=instagram" /></a>&nbsp;
+<p align="center"><a href="https://www.instagram.com/itsbishalde/" target='_blank'><img src="https://img.shields.io/badge/Instagram-pink?style=for-the-badge&logo=instagram" /></a>&nbsp;
 <a href="https://www.linkedin.com/in/bishalde/" target='_blank'><img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin" /></a>&nbsp;
 <a href="https://github.com/bishalde/" target='_blank'><img src="https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github"/></a>&nbsp;
 <a href="@itsbishalde" target='_blank'><img src="https://img.shields.io/badge/Snapchat-FFFC00?style=for-the-badge&logo=snapchat&logoColor=white"/></a>&nbsp;<br/>
