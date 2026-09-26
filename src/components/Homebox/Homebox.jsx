@@ -1,33 +1,43 @@
-import React from 'react'
-import './Homebox.css'
+import { useState } from "react";
+import { HEADLINES, pickHeadline } from "../../lib/headlines";
+import { readJSON, writeJSON } from "../../lib/storage";
+import "./Homebox.css";
 
-function Homebox() {
-  return (
-    <>
-    <section className="homebox">
-        <h1>Generate and Publish <br /> 
-        <span> Dynamic  
-          <div className="smallbx bx-1"></div>
-          <div className="smallbx bx-2"></div>
-          <div className="smallbx bx-3"></div>
-          <div className="smallbx bx-4"></div>
-        </span> QR Codes</h1>
+const KEY = "qrbuilder:headline";
 
-
-        <h3>QRBuilder is a dynamic QR code Generator. It allows user to easily create <br /> customized QR codes for sharing or embedding on their websites.
-        </h3>
-
-        <div className="homebox-btns">
-        <img src="/images/arrow.png" />
-          <a href="#userInput">
-          <button className='btn-secondary'>Get Started</button>
-          </a>
-          <button className='btn'>Watch Demo</button>
-        </div>
-        
-    </section>
-    </>
-  )
+// Chosen once per page load, remembering the last one so a reload always shows a new headline.
+function chooseHeadline() {
+  const index = pickHeadline(readJSON(KEY, null));
+  writeJSON(KEY, index);
+  return HEADLINES[index];
 }
 
-export default Homebox
+function Homebox() {
+  const [headline] = useState(chooseHeadline);
+
+  return (
+    <section className="hero">
+      <div className="hero__copy">
+        <h1>
+          {headline.lead}{" "}
+          <span className="hero__selected">
+            {headline.word}
+            <span className="handle handle--tl" />
+            <span className="handle handle--tr" />
+            <span className="handle handle--bl" />
+            <span className="handle handle--br" />
+          </span>
+        </h1>
+        <p className="hero__lede">
+          Make codes for links, Wi-Fi, contact cards, emails, texts and locations. Choose the colors, shapes and logo,
+          then download a PNG, JPEG or SVG. It all runs in your browser, and nothing you type is uploaded.
+        </p>
+        <a className="btn btn--primary btn--large" href="#create">
+          Create a QR code
+        </a>
+      </div>
+    </section>
+  );
+}
+
+export default Homebox;

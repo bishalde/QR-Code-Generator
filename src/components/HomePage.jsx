@@ -1,14 +1,17 @@
-import React from 'react'
 import Navbar from './Navbar/Navbar'
 import Homebox from './Homebox/Homebox'
-import Contentbox from './Contentbox/Contentbox'
+import Generator from './Generator/Generator'
+import Footer from './Footer'
 
-function HomePage(props) {
+function HomePage() {
   return (
     <>
     <Navbar />
-    <Homebox />
-    <Contentbox />
+    <main>
+      <Homebox />
+      <Generator />
+    </main>
+    <Footer />
     </>
   )
 }

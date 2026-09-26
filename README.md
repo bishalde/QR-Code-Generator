@@ -10,7 +10,7 @@
 </div>
 
 <div align="center">
-<img src="https://img.shields.io/badge/React-18.2.0-red?style=for-the-badge&logo=react" />&nbsp;<img src="https://img.shields.io/badge/vite-4.4.3-darkgreen?style=for-the-badge&logo=vite"  />&nbsp;<br><img src="https://img.shields.io/badge/HTML-ornage?style=for-the-badge&logo=html" alt="HTML version" />&nbsp;<img src="https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=css" alt="CSS version" />&nbsp;<img src="https://img.shields.io/badge/JavaScript-green?style=for-the-badge&logo=javasscript" alt="JS version" />&nbsp;</p>
+<img src="https://img.shields.io/badge/React-18.3-red?style=for-the-badge&logo=react" />&nbsp;<img src="https://img.shields.io/badge/vite-8-darkgreen?style=for-the-badge&logo=vite"  />&nbsp;<img src="https://img.shields.io/badge/Node.js-24_LTS-green?style=for-the-badge&logo=nodedotjs" />&nbsp;<br><img src="https://img.shields.io/badge/HTML-ornage?style=for-the-badge&logo=html" alt="HTML version" />&nbsp;<img src="https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=css" alt="CSS version" />&nbsp;<img src="https://img.shields.io/badge/JavaScript-green?style=for-the-badge&logo=javasscript" alt="JS version" />&nbsp;</p>
 </div>
 
 ### Repo Status ✳️
@@ -50,12 +50,28 @@ QRBuilder is an innovative and user-friendly dynamic QR code generator that empo
 
 <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
 
-- Customization Options
-- Dynamic QR Codes
-- Multiple Data Types
-- Website Embedding
-- Secure and Reliable
-- Cross platform
+- **8 QR types:** Link, Text, Email, Phone, SMS, Wi-Fi, Contact card (vCard) and Location
+- **Styling:** dot and corner shapes, solid colors or gradients, transparent backgrounds, and 6 ready-made color themes
+- **Logo in the middle:** upload a PNG, JPEG, SVG or WebP logo and set its size
+- **Scan safety:** error-correction levels, adjustable margin, and a warning when colors are too low-contrast to scan
+- **Exports:** PNG, JPEG or SVG at 512, 1024 or 2048 px, plus copy-to-clipboard
+- **History:** save codes in your browser and reopen them later to edit
+- **Light and dark mode**, mobile-friendly layout
+- **Private:** everything runs in the browser; nothing you type is uploaded
+
+### Run It Locally 💻
+
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
+
+Requires **Node.js 22.12 or newer** (Node 24 LTS recommended; see `.nvmrc`).
+
+```sh
+npm install
+npm run dev      # http://localhost:3000
+npm test         # unit tests (Vitest)
+npm run lint
+npm run build    # production build in dist/
+```
 
 ### Steps For Contribution⚡
 
@@ -108,21 +124,25 @@ git push -u origin <your_branch_name>
 
 <img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%">
 
-##### HomePage
+##### Home
 
-![Login Page](SCREENSHOTS/QR-Builder.png)
+![Home page](SCREENSHOTS/QR-Builder.png)
 
-##### Full HomePage
+##### Generator
 
-![Login Page](SCREENSHOTS/QR-Builder-Full.png)
+![QR code generator](SCREENSHOTS/QR-Builder-qr.png)
 
-##### QR Section
+##### Dark mode
 
-![Login Page](SCREENSHOTS/QR-Builder-qr.png)
+![Generator in dark mode](SCREENSHOTS/QR-Builder-dark.png)
 
-##### Pricing Page
+##### Saved codes
 
-![Login Page](SCREENSHOTS/QR-Builder-price.png)
+![Saved codes history](SCREENSHOTS/QR-Builder-history.png)
+
+##### Mobile
+
+<img src="SCREENSHOTS/QR-Builder-mobile.png" alt="Generator on a phone" width="320" />
 
 ### Social Links 🔗
 

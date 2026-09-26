@@ -1,145 +1,94 @@
-nav {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  position: fixed;
+.navbar {
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: rgba(255, 255, 255, 0.9);
   z-index: 100;
-}
-nav .logo img {
-  display: inline-block;
-  width: 210px;
-  height: 65px;
-}
-nav .logo img:hover {
-  scale: 1.1;
-}
-nav .hamberger {
-  display: none;
-}
-nav .hamberger div {
-  height: 3px;
-  width: 20px;
-  background-color: #063ab9;
-  margin: 3px;
-}
-nav .nav-links {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-nav .nav-links a {
-  position: relative;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #000000;
-  transition: all 0.3s ease-in-out;
-}
-nav .nav-links a:hover {
-  color: #063ab9;
-  font-weight: 500;
-  scale: 1.1;
-}
-nav .nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: -3px;
-  height: 3px;
-  width: 100%;
-  background-color: #063ab9;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 1s;
-}
-nav .nav-links a:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-nav .nav-links a.activepage {
-  color: #063ab9;
-}
-nav .nav-links a.activepage::after {
-  transform: scaleX(1);
-}
-nav .nav-buttons {
-  display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 24px;
+  height: 68px;
+  padding: 0 max(16px, calc((100vw - 1200px) / 2 + 24px));
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
 }
 
-@media screen and (max-width: 950px) {
-  nav {
-    padding: 5px 5px;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 1.3125rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: var(--radius-s);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+  background: var(--surface-sunk);
+}
+
+.nav-links a.activepage {
+  color: var(--brand);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .nav-toggle {
+    display: inline-grid;
   }
-  nav .logo img {
-    display: inline-block;
-    width: 200px;
-    height: 60px;
+
+  .nav-actions {
+    margin-left: auto;
   }
-  nav .nav-links {
-    gap: 20px;
+
+  .nav-links {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 16px 16px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    display: none;
   }
-  nav .nav-links a {
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
     font-size: 1rem;
   }
-  nav .nav-buttons {
-    gap: 5px;
-  }
-  nav .nav-buttons button {
-    font-size: 0.85rem;
-    padding: 10px 10px;
-  }
 }
-@media screen and (max-width: 700px) {
-  nav .hamberger {
-    display: block;
-    z-index: 100;
-    cursor: pointer;
-  }
-  nav .logo img {
-    width: 150px;
-    height: 50px;
-  }
-  nav .nav-links {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    background-color: rgba(255, 255, 255, 0.9);
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(-100%);
-  }
-  nav .activenavlinks {
-    transform: translateX(0%);
-  }
-  nav .nav-buttons {
-    position: fixed;
-    top: 60vh;
-    left: 0;
-    width: 100%;
-    height: 20vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(-100%);
-  }
-  nav .activenavbuttons {
-    transform: translateX(0%);
-  }
-}/*# sourceMappingURL=Navbar.css.map */

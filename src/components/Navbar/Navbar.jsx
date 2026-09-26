@@ -1,77 +1,60 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import Icon from "../Icon";
+import useTheme from "../../hooks/useTheme";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [navlinksvalue, setnavlinks] = useState("nav-links");
-  const [navbuttonsvlue, setnavbuttons] = useState("nav-buttons");
-
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, toggleTheme] = useTheme();
   const location = useLocation();
-  const [url, setUrl] = useState(null);
-  useEffect(() => {
-    setUrl(location.pathname);
-  }, [location]);
 
-  const navbarActive = () => {
-    if (navlinksvalue === "nav-links") {
-      setnavlinks("nav-links activenavlinks");
-      setnavbuttons("nav-buttons activenavbuttons");
-    } else {
-      setnavlinks("nav-links");
-      setnavbuttons("nav-buttons");
-    }
-  };
+  useEffect(() => setMenuOpen(false), [location]);
+
+  const linkClass = ({ isActive }) => (isActive ? "activepage" : "");
 
   return (
-    <>
-      <nav>
-        <div className="logo">
-          <NavLink to="/">
-            <img src="/logos/bigLogo_-_Crop-removebg-preview.png" />
-          </NavLink>
-        </div>
+    <nav className="navbar">
+      <Link to="/" className="brand" aria-label="QRBuilder home">
+        <img src="/logos/SymbolLogo-removebg-preview.png" alt="" width="36" height="36" />
+        <span>QRBuilder</span>
+      </Link>
 
-        <div className="hamberger" onClick={navbarActive}>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+      <div className={`nav-links${menuOpen ? " is-open" : ""}`} id="nav-links">
+        <NavLink className={linkClass} to="/" end>
+          Product
+        </NavLink>
+        <a href="/#create" onClick={() => setMenuOpen(false)}>
+          Create
+        </a>
+        <a href="https://github.com/bishalde/Qr-Code-Generator" target="_blank" rel="noreferrer">
+          <Icon name="github" size={18} />
+          GitHub
+        </a>
+      </div>
 
-        <div className={navlinksvalue}>
-          {/* activepage */}
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isPending ? "active " : isActive ? "activepage" : ""
-            }
-            to="/"
-            current="activepage"
-          >
-            Product
-          </NavLink>
-          <NavLink className={({ isActive, isPending }) =>
-              isPending ? "active " : isActive ? "activepage" : ""
-            } to="/pricing">
-            Pricing
-          </NavLink>
-          <NavLink className={({ isActive, isPending }) =>
-              isPending ? "active " : isActive ? "activepage" : ""
-            } to="/">
-            Solution
-          </NavLink>
-          <a
-            className="active"
-            href="https://github.com/bishalde/Qr-Code-Generator"
-          >
-            Github
-          </a>
-        </div>
-
-        <div className={navbuttonsvlue}>
-          <button className="btn">Sign In</button>
-          <button className="btn btn-secondary">Sign Up</button>
-        </div>
-      </nav>
-    </>
+      <div className="nav-actions">
+        <button
+          type="button"
+          className="icon-btn"
+          onClick={toggleTheme}
+          aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          title={theme === "dark" ? "Light mode" : "Dark mode"}
+        >
+          <Icon name={theme === "dark" ? "sun" : "moon"} />
+        </button>
+        <button
+          type="button"
+          className="icon-btn nav-toggle"
+          aria-expanded={menuOpen}
+          aria-controls="nav-links"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <Icon name={menuOpen ? "close" : "menu"} />
+        </button>
+      </div>
+    </nav>
   );
 };
 
