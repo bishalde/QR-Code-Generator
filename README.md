@@ -58,6 +58,7 @@ QRBuilder is an innovative and user-friendly dynamic QR code generator that empo
 - **History:** save codes in your browser and reopen them later to edit
 - **Light and dark mode** (opens in light mode; your choice is remembered), mobile-friendly layout
 - **Private:** everything runs in the browser; nothing you type is uploaded
+- **Fresh on every visit:** the hero headline rotates between six variants on each reload
 
 ### Run It Locally 💻
 
@@ -127,6 +128,10 @@ git push -u origin <your_branch_name>
 ##### Home
 
 ![Home page](SCREENSHOTS/QR-Builder.png)
+
+##### Full page
+
+![Full home page with generator, saved codes and footer](SCREENSHOTS/QR-Builder-Full.png)
 
 ##### Generator
 
